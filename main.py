@@ -1,3 +1,8 @@
+"""
+This file starts the Task App
+It creates the application, opens the main window
+to keep the app running
+"""
 from logic import *
 import sys
 def main():
