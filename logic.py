@@ -184,15 +184,6 @@ class Logic(QMainWindow, Ui_MainWindow):
         """
         selected_index = self.listView.currentIndex()
 
-        if not selected_index.isValid():
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Icon.Warning)
-            msg.setWindowTitle("Selection Error")
-            msg.setText("Please select a task to mark complete.")
-            msg.setStandardButtons(QMessageBox.StandardButton.Ok)
-            msg.exec()
-            return
-
         try:
             with open("tasks.csv", mode="r", newline='') as file:
                 reader = csv.reader(file)
